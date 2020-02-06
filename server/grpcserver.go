@@ -9,6 +9,7 @@ import (
 type GRPCServer struct{}
 
 //Add ...
-func (s *GRPCServer) giveResponse(ctx context.Context, req *protocol.GRRequest) (*protocol.GRResponse, error) {
+func (s *GRPCServer) GiveResponse(ctx context.Context, req *protocol.GRRequest) (*protocol.GRResponse, error) {
+
 	return &protocol.GRResponse{Res: req.GetReq() + "pong"}, nil
 }
